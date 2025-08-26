@@ -1,376 +1,174 @@
----
-title: Schedule
-layout: home
-nav_order: 1
----
+# just-the-docs-template
 
-<style type="text/css">
-  th {
-    font-size: 1rem !important;
-  }
-  td {
-    vertical-align: top;
-    font-size: 1rem !important;
-  }
-  .staffer {
-    display: flex;
-    margin: 1rem;
-  }
-  .staffer p, .staffer .staffer-name {
-    margin: 0.25rem !important;
-    margin-top: 0.5rem !important;
-  }
-  .staffer .staffer-image {
-    border-radius: 50%;
-    height: 100px;
-    margin-right: 1rem;
-  }
-  .staffer .staffer-meta {
-    color: #959396 !important;
-    margin-top: 0.1rem !important;
-  }
-</style>
+This is a *bare-minimum* template to create a [Jekyll] site that:
 
-<h1>CSE599H: Advances and Challenges in Language Models, Reasoning, and AI Agents</h1>
-<h3>
-Spring 2024-2025<br/>
-Mondays and Wednesdays, 3pm to 4:20pm<br/>
-CSE2 G04<br/>
-<a href="https://www.gradescope.com/courses/1007475">Gradescope</a>
-|
-<a href="https://edstem.org/us/courses/77246">Ed</a>
-</h3>
-<br/>
+- uses the [Just the Docs] theme;
+- can be built and published on [GitHub Pages];
+- can be built and previewed locally, and published on other platforms.
 
-<div class="staffer">
-  <img class="staffer-image" src="{{site.url}}/images/hanna.jpg" alt="">
-  <div>
-    <h3 class="staffer-name">
-      <a href="https://homes.cs.washington.edu/~hannaneh/">Hanna Hajishirzi</a>
-    </h3>
-    <p class="staffer-meta">Instructor</p>
-    <p class="staffer-meta"><a href="mailto:hannaneh@cs.washington.edu">hannaneh [at] cs [dot] washington [dot] edu</a></p>
-  </div>
-</div>
+More specifically, the created site:
 
-<div class="staffer">
-  <img class="staffer-image" src="{{site.url}}/images/jiacheng.jpg" alt="">
-  <div>
-    <h3 class="staffer-name">
-      <a href="https://liujch1998.github.io/">Jiacheng Liu</a>
-    </h3>
-    <p class="staffer-meta">TA</p>
-    <p class="staffer-meta"><a href="liujc@cs.washington.edu">liujc [at] cs [dot] washington [dot] edu</a></p>
-  </div>
-</div>
+- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
+- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
 
-<div class="staffer">
-  <img class="staffer-image" src="{{site.url}}/images/rulin.jpg" alt="">
-  <div>
-    <h3 class="staffer-name">
-      <a href="https://rulinshao.github.io/">Rulin Shao</a>
-    </h3>
-    <p class="staffer-meta">TA</p>
-    <p class="staffer-meta"><a href="rulins@cs.washington.edu">rulins [at] cs [dot] washington [dot] edu</a></p>
-  </div>
-</div>
+To get started with creating a site, simply:
 
-Office hours by appointment. <br/>
-To contact course staff, please make an Ed post. <br/>
-<!-- We welcome feedback on the course. If you prefer to leave it anonymously, use
-<a href="https://forms.gle/khU2mGjaaTDF7poa8">this form</a>. -->
+1. click "[use this template]" to create a GitHub repository
+2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
 
+If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](#hosting-your-docs-from-an-existing-project-repo).
 
-<hr/>
+After completing the creation of your new site on GitHub, update it as needed:
 
-<p>
-  Language models, such as GPT-o3, DeepSeek-R1, and Deep Research, have demonstrated remarkable capabilities in natural language understanding, generation, and reasoning, with applications ranging from literature summarization to complex problem-solving tasks. However, as we will discuss, these models are not without limitations, such as susceptibility to hallucinations, poor capabilities in strategic exploration, and limitations in long-horizon planning. In this class, we will explore the latest research on language models, reasoning, and AI agents, discussing both the advances and challenges in these areas. We will examine the current state-of-the-art models, their limitations, and the ongoing efforts to address these challenges. Through this course, you will engage in paper discussions and gain a deeper understanding of the latest developments in the field and contribute to the ongoing discussions and research in this exciting area.
-</p>
-<p>
-  This is a seminar designed for PhD students. Students are expected to be able to read and understand the assigned papers on their own, and they should be familiar with ML and NLP concepts at the level of having taken advanced undergraduate classes.
-</p>
+## Replace the content of the template pages
 
-<h2>Schedule</h2>
+Update the following files to your own content:
 
-Weekly due dates:
-<ul>
-  <li>By Monday 11:59pm: Slides for Wednesday's papers (presenters only)</li>
-  <li>By Saturday 11:59pm: Slides for Monday's papers (presenters only)</li>
-</ul>
+- `index.md` (your new home page)
+- `README.md` (information for those who access your site repo on GitHub)
 
+## Changing the version of the theme and/or Jekyll
 
+Simply edit the relevant line(s) in the `Gemfile`.
 
-<table>
-  <tr>
-    <td>Mar 31 (Mon)</td>
-    <td><strong>Course overview <a href="{{site.url}}/slides/03-31-overview.pdf">(slides)</a></strong><br>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 2 (Wed)</td>
-    <td><strong>Basic Pre-training and Post-training <a href="https://docs.google.com/presentation/d/1gn4NWJOU_tXxSd_g8-zdK8Me5c2UaxuymzXYrDes7hU/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-        <li><a href="https://arxiv.org/abs/2407.21783">The Llama 3 Herd of Models</a></li>
-        <li><a href="https://arxiv.org/abs/2501.00656">2 OLMo 2 Furious</a></li>
-        <li><a href="https://arxiv.org/abs/2412.19437">DeepSeek-V3 Technical Report</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-        <li><a href="https://huggingface.co/spaces/nanotron/ultrascale-playbook">The Ultra-Scale Playbook:
-            Training LLMs on GPU Clusters</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 7 (Mon)</td>
-    <td><strong>Guest Lecture: Nathan Lambert <a href="https://docs.google.com/presentation/d/1RJLyfUz7_IbudBxoLZ5YHafzJbvlcZJdKmRWBtstZnQ/edit?usp=sharing">(slides)</a></strong><br>
-      <ul>
-        <li><a href="https://arxiv.org/pdf/2411.15124">Tülu 3: Pushing Frontiers in Open Language Model Post-Training</a></li>
-        <li><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a></li>
-      </ul>
-      <u>Optional reading</u>
-      <ul>
-        <li><a href="https://arxiv.org/pdf/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a></li>
-        <li><a href="https://arxiv.org/abs/2406.09279">Unpacking DPO and PPO: Disentangling Best Practices for Learning from Preference Feedback</a></li>
-        <li><a href="https://arxiv.org/abs/2503.20783">Understanding R1-Zero-Like Training: A Critical Perspective</a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 9 (Wed)</td>
-    <td><strong>Guest Lecture: Kyle Lo <a href="https://docs.google.com/presentation/d/1wM10YPmS_BwUY55FyutXtFwnYWmWX90ZABp29YuWxaw/edit?usp=sharing">(slides)</a></strong><br>
-      <ul>
-        <li><a href="https://arxiv.org/abs/2402.00159">Dolma: Open Corpus of Three Trillion Tokens</a></li>
-        <li><a href="https://arxiv.org/abs/2406.11794">DataComp-LM: Next Generation Training Sets</a></li>
-        <li><a href="https://arxiv.org/abs/2406.17557">The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale</a></li>
-        </ul>
-      <u>Optional reading</u>
-      <ul>
-        <li><a href="https://arxiv.org/abs/2406.03476">Does your data spark joy? Performance gains from domain upsampling at the end of training</a></li>
-        <li><a href="https://arxiv.org/abs/2502.10341">Organize the Web: Constructing Domains Enhances Pre-Training Data Curation</a></li>
-        <li><a href="https://arxiv.org/abs/2403.15796">Understanding Emergent Abilities of Language Models from the Loss Perspective</a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 14 (Mon)</td>
-    <td><strong>Scaling Laws of Language Models <a href="https://docs.google.com/presentation/d/1ovtGdZeCXv4aDowy8-pw2HGvMcebLd30mOMW3S4DZaE/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2203.15556">Training Compute-Optimal Large Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2403.08540">Language models scale reliably with over-training and on downstream tasks</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2001.08361">Scaling Laws for Neural Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2410.11840">A Hitchhiker's Guide to Scaling Law Estimation</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 16 (Wed)</td>
-    <td><strong>Building Reasoning Models & Systems I <a href="https://docs.google.com/presentation/d/1mj2Bk83kkjhoYFcgyCkqMT9z91OSESKh-543psAmIlo/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2201.11903">Chain of Thought Prompting Elicits Reasoning in Large Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2203.11171">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2203.14465">STAR: Bootstrapping Reasoning With Reasoning</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 21 (Mon)</td>
-    <td><strong>Building Reasoning Models & Systems II <a href="https://docs.google.com/presentation/d/1dFgseoIZbgMh6O_mYdM0vu9lJR5SjFti0dczQOu4-E8/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://openai.com/index/o3-mini-system-card/">OpenAI o3-mini System Card</a></li>
-      <li><a href="https://arxiv.org/pdf/2411.15124">Tülu 3: Pushing Frontiers in Open Language Model Post-Training</a> (Section 6 only)</li>
-      <li><a href="https://arxiv.org/pdf/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a></li>
-      <li><a href="https://arxiv.org/abs/2501.17161">SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training</a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 23 (Wed)</td>
-    <td><strong>Test-Time Scaling <a href="https://docs.google.com/presentation/d/1_Uru4RmgqpoCfJP_Ovd7SI0JPxHwhAByEdl93RSYy6s/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2404.03683">Stream of Search (SoS): Learning to Search in Language</a></li>
-      <li><a href="https://arxiv.org/abs/2501.19393">s1: Simple test-time scaling</a></li>
-      <li><a href="https://arxiv.org/abs/2504.03790">Sample, Don't Search: Rethinking Test-Time Alignment for Language Models</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://llm-reasoning-ai.github.io/survey_arxiv.pdf">A Survey of Frontiers in LLM Reasoning: Inference Scaling, Learning to Reason, and Agentic Systems</a></li>
-      <li><a href="https://arxiv.org/abs/2408.03314">Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a></li>
-      <li><a href="https://arxiv.org/abs/2504.09858">Reasoning Models Can Be Effective Without Thinking</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 28 (Mon)</td>
-    <td><strong>AI Agents and Tool Use <a href="https://docs.google.com/presentation/d/1hc0O2NHw2_tuk6asTXG-vX4fVmuN2OeW3zgYaWCX-io/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools</a></li>
-      <li><a href="https://arxiv.org/abs/2503.04625">START: Self-taught Reasoner with Tools</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Apr 30 (Wed)</td>
-    <td><strong>AI Agents for Coding <a href="https://docs.google.com/presentation/d/1oGFSFp8Eg1QBljiGMcGXY8MIkMzK2Ck5YFiWCfyFJ3g/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2405.15793">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a></li>
-      <li><a href="https://arxiv.org/abs/2407.16741">OpenHands: An Open Platform for AI Software Developers as Generalist Agents</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2403.07974">LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code</a></li>
-      <li><a href="https://arxiv.org/abs/2502.12115">SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 5 (Mon)</td>
-    <td><strong>AI Agents for Computer Use and Web Browsing <a href="https://docs.google.com/presentation/d/12CQkARYjGDSG4ZfUuCP-oe4Fd3HiSYtgQmP7-y5kTw8/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d413e48f84dc61244b6be550f1cd8f5-Abstract-Datasets_and_Benchmarks_Track.html">OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a></li>
-      <li><a href="https://arxiv.org/abs/2401.13919">WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models</a></li>
-      <li><a href="https://arxiv.org/abs/2501.12326">UI-TARS: Pioneering Automated GUI Interaction with Native Agents</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2307.13854">WebArena: A Realistic Web Environment for Building Autonomous Agents</a></li>
-      <li><a href="https://openai.com/index/computer-using-agent/">[OpenAI] Computer-Using Agent</a></li>
-      <li><a href="https://www.anthropic.com/news/developing-computer-use">[Anthropic] Developing a computer use model</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 7 (Wed)</td>
-    <td><strong>AI Agents for Deep Research <a href="https://docs.google.com/presentation/d/1wbOdzUVykNwEtbXhZj1zCVzzMd4L5uH5rDSgV2yHY60/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://cdn.openai.com/deep-research-system-card.pdf">Deep Research System Card</a></li>
-      <li><a href="https://arxiv.org/abs/2411.14199">OpenScholar: Synthesizing Scientific Literature with Retrieval-augmented LMs</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2401.12475">Search-R1: Training LLMs to Reason and Leverage Search Engines</a></li>
-      <li><a href="https://arxiv.org/abs/2503.19470">ReSearch: Learning to Reason with Search for LLMs via Reinforcement Learning</a></li>
-      <li><a href="https://arxiv.org/abs/2503.12759">RAG-RL: Advancing Retrieval-Augmented Generation via RL and Curriculum Learning</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 12 (Mon)</td>
-    <td><strong>Features and Limitations I <a href="https://docs.google.com/presentation/d/16X8xw42IQqrw-FHrvTRFQMkCP7z0DIhxCWzKRSOVj7s/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://www.nature.com/articles/s41586-024-07566-y">AI models collapse when trained on recursively generated data</a></li>
-      <li><a href="https://arxiv.org/abs/2309.12288">The Reversal Curse: LLMs trained on "A is B" fail to learn "B is A"</a></li>
-      <li><a href="https://aclanthology.org/2024.findings-acl.680.pdf">Mitigating Reversal Curse in Large Language Models via Semantic-aware Permutation Training</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2309.14402">Physics of Language Models: Part 3.2, Knowledge Manipulation</a></li>
-      <li><a href="https://arxiv.org/abs/2403.13799">Reverse training to nurse the reversal curse</a></li>
-      <li><a href="https://arxiv.org/abs/2305.18654">Faith and Fate: Limits of Transformers on Compositionality</a></li>
-      <li><a href="https://arxiv.org/abs/2311.00059">The Generative AI Paradox: "What It Can Create, It May Not Understand"</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 14 (Wed)</td>
-    <td><strong>Features and Limitations II <a href="https://docs.google.com/presentation/d/10iwwI2n4_CBLyg042_FV0dYAO2VWDrVy3_TVWI5aoSU/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2412.14093">Alignment faking in large language models</a></li>
-      <li><a href="https://arxiv.org/abs/2201.02177">Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets</a></li>
-      <li><a href="https://arxiv.org/abs/2412.04318">The Hyperfitting Phenomenon: Sharpening and Stabilizing LLMs for Open-Ended Text Generation</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2304.15004">Are Emergent Abilities of Large Language Models a Mirage?</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 19 (Mon)</td>
-    <td><strong>Alternative Architectures <a href="https://docs.google.com/presentation/d/1O-TWKWSXgFInhNrUm4xzkb2qZx7piv1gz8O3PlmY5Tc/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2409.02060">OLMoE: Open Mixture-of-Experts Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2312.00752">Mamba: Linear-Time Sequence Modeling with Selective State Spaces</a></li>
-      <li><a href="https://arxiv.org/abs/2407.04620">Learning to (Learn at Test Time): RNNs with Expressive Hidden States</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2412.08821">Large Concept Models: Language Modeling in a Sentence Representation Space</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 21 (Wed)</td>
-    <td><strong>Efficiency and Scaling <a href="https://docs.google.com/presentation/d/1w6bK2AgwOPJ-xOJUzc7MFlNPc9Bl60Qu/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2205.14135">FlashAttention: Fast and Memory-Efficient Exact Attention</a></li>
-      <li><a href="https://arxiv.org/pdf/2309.06180">vLLM: Easy, Fast, and Cheap LLM Serving</a></li>
-      <li><a href="https://arxiv.org/abs/2305.14314">QLoRA: Efficient Finetuning of Quantized LLMs</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>May 26 (Mon)</td>
-    <td><strong>No class, Memorial Day</strong><br>
-    </td>
-  </tr>
-  <tr>
-    <td>May 28 (Wed)</td>
-    <td><strong>Multimodality <a href="https://docs.google.com/presentation/d/190-8QF4rHeOVzvlGHgGVdklmscKp8DYoPt8shRLukvw/edit?usp=sharing">(slides)</a></strong><br>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2304.08485">Visual Instruction Tuning</a></li>
-      <li><a href="https://arxiv.org/abs/2409.17146">Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2408.11039">Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2405.09818">Chameleon: Mixed-Modal Early-Fusion Foundation Models</a></li>
-      <li><a href="https://arxiv.org/abs/2404.12390">BLINK: Multimodal Large Language Models Can See but Not Perceive</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Jun 2 (Mon)</td>
-    <td><strong>Interpretability in LLMs <a href="https://docs.google.com/presentation/d/1ZRgREe15aZv9UMYTVhLHK14nQWUhulk9U4DtHLQuFHU/edit?usp=sharing">(slides)</a></strong>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2309.08600">Sparse Autoencoders Find Highly Interpretable Features in Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2411.14257">Do I Know This Entity? Knowledge Awareness and Hallucinations in Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2504.14150">Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2402.04614">Faithfulness vs. Plausibility: On the (Un)Reliability of Explanations from Large Language Models</a></li>
-      <li><a href="https://arxiv.org/abs/2406.04093">Scaling and evaluating sparse autoencoders</a></li>
-      <li><a href="https://arxiv.org/abs/2202.05262">Locating and Editing Factual Associations in GPT</a></li>
-      <li><a href="https://transformer-circuits.pub/2025/attribution-graphs/biology.html">On the Biology of a Large Language Model</a></li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Jun 4 (Wed)</td>
-    <td><strong>Broad applications of LLMs outside of NLP <a href="https://docs.google.com/presentation/d/1Rau6D07zFU-6Am0c1GQkGTR-6OkITnNNWodmEPwqqFY/edit?usp=sharing">(slides)</a></strong>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2502.18008">NotaGen: Advancing Musicality in Symbolic Music Generation with Large Language Model Training Paradigms</a></li>
-      <li><a href="https://www.nature.com/articles/s41586-021-03819-2">Highly accurate protein structure prediction with AlphaFold</a></li>
-      <li><a href="https://arxiv.org/abs/2211.09085">Galactica: A Large Language Model for Science</a></li>
-    </ul>
-    <u>Optional reading</u>
-    <ul>
-      <li><a href="https://arxiv.org/abs/2301.11325">MusicLM: Generating Music From Text</a></li>
-      <li><a href="https://www.sciencedirect.com/science/article/pii/S2405471224000292">Convolutions are competitive with transformers for protein sequence pretraining</a></li>
-    </ul>
-    </td>
-  </tr>
-</table>
-      <!-- <li><a href="https://arxiv.org/abs/2403.04132">Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference</a></li> -->
-      <!-- <li><a href="https://arxiv.org/abs/2311.12022">GPQA: A Graduate-Level Google-Proof Q&A Benchmark</a></li> -->
-      <!-- <li><a href="https://arxiv.org/abs/2501.14249">Humanity's Last Exam</a></li> -->
-      <!-- <li><a href="https://arxiv.org/abs/2103.03874">Measuring Mathematical Problem Solving With the MATH Dataset</a></li> -->
+## Adding a plugin
 
-<hr/>
-<h3>Acknowledgements</h3>
-We are grateful to Pang Wei Koh for sharing their website template with us.
+The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
+
+To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+
+- Add the following to your site's `Gemfile`:
+
+  ```ruby
+  gem "jekyll-default-layout"
+  ```
+
+- And add the following to your site's `_config.yml`:
+
+  ```yaml
+  plugins:
+    - jekyll-default-layout
+  ```
+
+Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+
+## Publishing your site on GitHub Pages
+
+1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+
+    ```yaml
+    title: YOUR TITLE
+    description: YOUR DESCRIPTION
+    theme: just-the-docs
+
+    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+
+    aux_links: # remove if you don't want this link to appear on your pages
+      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
+    ```
+
+2.  Push your updated `_config.yml` to your site on GitHub.
+
+3.  In your newly created repo on GitHub:
+    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
+    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+
+## Building and previewing your site locally
+
+Assuming [Jekyll] and [Bundler] are installed on your computer:
+
+1.  Change your working directory to the root directory of your site.
+
+2.  Run `bundle install`.
+
+3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+
+    The built site is stored in the directory `_site`.
+
+## Publishing your built site on a different platform
+
+Just upload all the files in the directory `_site`.
+
+## Customization
+
+You're free to customize sites that you create with this template, however you like!
+
+[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+
+## Hosting your docs from an existing project repo
+
+You might want to maintain your docs in an existing project repo. Instead of creating a new repo using the [just-the-docs template](https://github.com/just-the-docs/just-the-docs-template), you can copy the template files into your existing repo and configure the template's Github Actions workflow to build from a `docs` directory. You can clone the template to your local machine or download the `.zip` file to access the files.
+
+### Copy the template files
+
+1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
+
+2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
+
+### Modify the GitHub Actions workflow
+
+The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
+
+1.  Set the default `working-directory` param for the build job.
+
+    ```yaml
+    build:
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: docs
+    ```
+
+2.  Set the `working-directory` param for the Setup Ruby step.
+
+    ```yaml
+    - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          cache-version: 0
+          working-directory: '${{ github.workspace }}/docs'
+    ```
+
+3.  Set the path param for the Upload artifact step:
+
+    ```yaml
+    - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_site/
+    ```
+
+4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
+
+    ```yaml
+    on:
+      push:
+        branches:
+          - "main"
+        paths:
+          - "docs/**"
+    ```
+
+## Licensing and Attribution
+
+This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
+
+The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
+
+----
+
+[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+
+[Jekyll]: https://jekyllrb.com
+[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
+[GitHub Pages]: https://docs.github.com/en/pages
+[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[Bundler]: https://bundler.io
+[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
+[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
+[MIT License]: https://en.wikipedia.org/wiki/MIT_License
+[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
+[actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
